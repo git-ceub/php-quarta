@@ -7,3 +7,9 @@ CREATE TABLE aluno (
   nome varchar(200) NOT NULL,
   idade int NOT NULL
 );
+
+CREATE table usuario (
+	id INTEGER auto_increment primary key,
+    login varchar(100) not null,
+    senha varchar (100) not null
+);
