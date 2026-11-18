@@ -1,5 +1,6 @@
 <?php
 
+    include '../sessao.php';
     include '../conexao.php';
 
     // --- Listagem completa ----

@@ -16,9 +16,13 @@
 
     $usuario = $stmt->fetch();
 
+    session_start();
     if($usuario) {
-        header("Location: aluno/index.php");
+        $_SESSION['logado'] = true;
+        $_SESSION['login'] = $login;
+        header("Location: /exemplo/aluno/index.php");
     } else {
+        $_SESSION['logado'] = false;
         echo "Usuário ou senha inválidos";
     }
 

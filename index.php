@@ -1,5 +1,11 @@
 <?php
 
+    session_start();
+    if(!(empty($_SESSION) || $_SESSION['logado'] == false)) {
+        header('Location:/exemplo/aluno/index.php');
+        exit;
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
